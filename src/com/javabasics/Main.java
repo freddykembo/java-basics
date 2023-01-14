@@ -1,18 +1,18 @@
 package com.javabasics;
 
+
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        // String
-        String name = "freddykembo";
-        System.out.println(name.toUpperCase());
-        System.out.println(name.toLowerCase());
-        System.out.println(name.charAt(0));
+        // Packages and import statement
+        Date date = new Date();
+        String s = new String();
+        LocalDate localDate = LocalDate.now();
+        LocalDateTime localDateTime = LocalDateTime.now();
 
-        String secondName = "kembo";
-        System.out.println(name.contains(secondName));
-        System.out.println(name.equals(secondName));
+        java.sql.Date dateSql = new java.sql.Date(1);
     }
 }
