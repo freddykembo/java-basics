@@ -7,12 +7,21 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        // Math
-        System.out.println(Math.abs(-15));
-        System.out.println(Math.max(6, 20));
-        System.out.println(Math.min(6, 20));
-        System.out.println((int) Math.pow(5,2));
-        System.out.println((int) Math.sqrt(25));
-        System.out.println(Math.PI);
+        // Switch statement
+        String gender = "FEMALE";
+
+        switch (gender.toUpperCase()) {
+            case "FEMALE":
+                System.out.println("I am a Female");
+                break;
+            case "MALE":
+                System.out.println("I am a Male");
+                break;
+            case "PREFER NOT TO SAY":
+                System.out.println("PREFER NOT TO SAY");
+                break;
+            default:
+                System.out.println("Unknown gender");
+        }
     }
 }
