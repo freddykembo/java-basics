@@ -9,24 +9,24 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        // Arrays
+        // For loop
+        int [] numbers = {0, 1, 2, 3, 100};
+        String [] names = {"freddy", "kembo", "jayden", "jelani", "jari"};
 
-//        int [] numbers = new int[3];
-//        numbers[0] = 2;
-//        numbers[1] = 1;
-//        numbers[2] = 0;
+        for (int i=0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
 
-        int [] numbers = {0, 1, 2, 3}; // No size of array defined. Open to add
-        String [] names = {"freddy", "kembo"};
+        System.out.println("Enhanced for loop");
 
-        int one = numbers[1];
-        String lastName = names[names.length - 1];
+        for (int number : numbers) {
+            // No access to index
+            System.out.println(number);
+        }
 
-        System.out.println(Arrays.toString(numbers));
-        System.out.println(numbers.length);
-        System.out.println(Arrays.toString(names));
-        System.out.println(names.length);
-        System.out.println(one);
-        System.out.println(lastName);
+        System.out.println("---------------------------------------------------");
+        
+        Arrays.stream(names).forEach(System.out::println);
+
     }
 }
