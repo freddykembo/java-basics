@@ -1,32 +1,26 @@
 package com.javabasics;
 
 
-import java.lang.reflect.Array;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // For loop
-        int [] numbers = {0, 1, 2, 3, 100};
-        String [] names = {"freddy", "kembo", "jayden", "jelani", "jari"};
+        // Scanner
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String userName = scanner.nextLine();
+        System.out.println("Hello " + userName);
 
-        for (int i=0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
+        System.out.println("How old are you?");
+        int age = scanner.nextInt();
+        int year = LocalDate.now().minusYears(age).getYear();
+        System.out.println("You were born in " + year);
+
+        if (age >= 18) {
+            System.out.println("and you are an adult :)");
+        } else {
+            System.out.println("and you are not an adult :(");
         }
-
-        System.out.println("Enhanced for loop");
-
-        for (int number : numbers) {
-            // No access to index
-            System.out.println(number);
-        }
-
-        System.out.println("---------------------------------------------------");
-        
-        Arrays.stream(names).forEach(System.out::println);
-
     }
 }
